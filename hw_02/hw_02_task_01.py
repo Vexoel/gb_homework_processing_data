@@ -55,9 +55,12 @@ dict = []
 for n in range(1, pages + 1):
   params = {'text': job, 'page': n}
   
-  responce = requests.get(url, params=params, headers=headers)
+  response = requests.get(url, params=params, headers=headers)
   
-  dom = BeautifulSoup(responce.text, 'html.parser')
+  if response.status_code == 404:
+    break
+  
+  dom = BeautifulSoup(response.text, 'html.parser')
   
   items = dom.find_all('div', class_='vacancy-serp-item__row vacancy-serp-item__row_header')
   

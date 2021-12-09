@@ -63,8 +63,6 @@ while True:
 
 mails = []
 
-count = 0
-
 for link in links:
     item = {}
     driver.get(link)
@@ -82,9 +80,6 @@ for link in links:
     item['body'] = element.text
 
     mails.append(item)
-    count += 1
-    if count == 5:
-        break;
 
 client = MongoClient('127.0.0.1', 27017)
 

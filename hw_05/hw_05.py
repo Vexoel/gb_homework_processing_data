@@ -79,6 +79,8 @@ for link in links:
     element = driver.find_element(By.XPATH, '//div[@class="letter-body__body-content"]//div[contains(@id, "BODY")]')
     item['body'] = element.text
 
+    item['_id'] = link.split(':')[2]
+
     mails.append(item)
 
 client = MongoClient('127.0.0.1', 27017)

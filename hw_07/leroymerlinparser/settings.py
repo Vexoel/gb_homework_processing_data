@@ -69,7 +69,7 @@ COOKIES_ENABLED = True
 ITEM_PIPELINES = {
     'leroymerlinparser.pipelines.LeroymerlinparserImgPipeline': 200,
     'leroymerlinparser.pipelines.LeroymerlinparserPipeline': 300,
-    'leroymerlinparser.pipelines.LeroymerlinparserDatabasePipeline': 300,
+    'leroymerlinparser.pipelines.LeroymerlinparserDatabasePipeline': 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

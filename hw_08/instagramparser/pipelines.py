@@ -46,7 +46,7 @@ class InstagramparserDatabasePipeline:
 
     def process_item(self, item, spider):
         if isinstance(item, InstagramProfileItem):
-            collection = 'profile'
+            collection = 'profiles'
 
             mongodb_item = {'_id': item['user_id'],
                             'user_name': item['user_name'],
